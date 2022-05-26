@@ -2,11 +2,12 @@ import collections
 import os
 import logging
 import pathlib
-from fastapi import FastAPI, Form, HTTPException
+
+
+from fastapi import Depends, FastAPI, Form, HTTPException
 from fastapi import FastAPI, File, UploadFile
 from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
-import random
 import sqlite3
 import json
 from fastapi.responses import ORJSONResponse
@@ -77,7 +78,7 @@ def root():
 # curl -X GET 'http://127.0.0.1:9000/items'
 @app.get("/items", response_class=ORJSONResponse)
 def show_item():
-    conn = sqlite3.connect("../db/item.db", check_same_thread=False)
+    conn = sqlite3.connect('../db/item.db', check_same_thread=False)
     c = conn.cursor()
     items = c.execute('SELECT * FROM items;').fetchall()
     content = db_toList(items)
