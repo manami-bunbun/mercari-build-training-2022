@@ -1,0 +1,50 @@
+# NOTE(tkat0): Testing for backend by using REST Client (VSCode extension)
+# https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+
+
+@host = http://localhost:9000
+
+### POST /items
+@name = test
+@category = smartphone
+# TODO(tkat0): change test image
+@image = ./python/image/05dbf777dfd91e7570c3bcb5bf8a67e23a7994c0c81b3783be3d00890b0cd106.jpg
+
+POST {{host}}/items
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="name"
+
+{{name}}
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="category"
+
+{{category}}
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="image.jpg"
+Content-Type: image/jpg
+
+< {{image}}
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### GET /items
+
+GET {{host}}/items
+
+### GET /search
+@keyword = iphone
+
+GET {{host}}/search
+    ?keyword={{keyword}}
+
+### GET /image
+@image_filename = 05dbf777dfd91e7570c3bcb5bf8a67e23a7994c0c81b3783be3d00890b0cd106.jpg
+
+GET {{host}}/image/{{image_filename}}
+
+### GET /check
+# Check score of image
+@id = 20
+
+GET {{host}}/check/{{id}}
