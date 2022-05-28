@@ -158,6 +158,6 @@ def get_image(image_filename):
 def get_checked(id):
     conn = sqlite3.connect('../db/item.db')
     c = conn.cursor()
-    score = c.execute('SELECT score FROM items WHERE id =  ? ;', (id),).fetchone() 
+    score = c.execute('SELECT score FROM score WHERE id =  ? ;', (id,)).fetchone() 
     conn.close()
     return score
