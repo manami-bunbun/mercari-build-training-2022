@@ -49,7 +49,7 @@ def db_toList(items):
     return objects_list 
 
 def image_toHash(image_filename):
-    image_name, image_fmt = map(str, image_filename.split('.'))
+    image_name, image_fmt = map(str, os.path.basename(image_filename).split('.'))
     image_hashname = hashlib.sha256(image_name.encode()).hexdigest()
     return '.'.join([image_hashname, image_fmt])
 
