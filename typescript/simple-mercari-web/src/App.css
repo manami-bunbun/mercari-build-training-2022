@@ -162,6 +162,7 @@ input {
 	outline: 0;
 }
 .Phone-img {
+  object-fit:scale-down;
   height: 320px;
   width: auto;
 }
