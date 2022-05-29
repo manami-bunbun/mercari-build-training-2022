@@ -92,6 +92,7 @@ def show_item():
 def add_item(name: str = Form(...), category: str = Form(...), image: UploadFile = File(...)):
     
     #imageNameハッシュ化
+    # TODO(tkat0): seems the image is overwritten if filename is same.
     image_hashname = image_toHash(image.filename) 
     file_location = f"image/{image_hashname}"
     save_image(file_location,image)
