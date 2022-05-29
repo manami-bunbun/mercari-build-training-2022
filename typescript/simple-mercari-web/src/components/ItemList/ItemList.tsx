@@ -60,7 +60,7 @@ export const ItemList: React.FC<Prop> = (props) => {
             <p>
               <span>{item.name}</span>
               <br /><br />
-              <span className="item-score">Damage analysis: {item.score} </span>
+              <span className="item-score">Damage analysis: {item.score} % </span>
 
             </p>
             </div>
