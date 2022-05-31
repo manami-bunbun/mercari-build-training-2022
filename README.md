@@ -50,6 +50,9 @@ The following icons indicate pointers for
 - 現在step5にあたる、POSTに対しての画像ファイル処理にエラーが発生しているため、ItemList.tsc内ではPlaceholderファイルを表示している
   	
 - ブランチstep5はこのエラー解消用
+	
+## DEMO VIDEO
+	[Youtube](https://youtu.be/Gzsw_WLsBCM)
   
 ## ブランチ運用
 
@@ -57,9 +60,11 @@ The following icons indicate pointers for
 	  main—------(念の為おいておく)
 				|- HackWeek (デモ用)
 					|- frontend(typescript用) :森本さん
-					|- Backend(Jupyternoteでopencv処理):大村さん
+					|- Backend:大村さん　(以前の評価関数)
+					|- Unit Tests
 					|- newDB (最新)
 					|- checker (以前のDB)
+						|_newOpenCV(新しい評価関数)
 	
 	
 	
