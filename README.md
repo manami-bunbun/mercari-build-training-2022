@@ -1,6 +1,6 @@
-# Build@Mercari Training Program 2022 [Japanese Link](https://mercan.mercari.com/articles/33259/)
+# Build@Mercari Training Program 2022 ([Ja](https://mercan.mercari.com/articles/33259/))
 
-## Training Tasks 
+### Training Tasks 
 
 (details on branch: main)
 - [x] **STEP1** Git ([JA](document/step1.ja.md)/[EN](document/step1.en.md))
@@ -15,15 +15,18 @@
   /[EN](document/step6.en.md))
 	
 
-## Hackweek 5/23-5/31
+# Hackweek 5/23-5/31
  
 **Theme**:[　Mercari](https://www.mercari.com/)'s new listing feature
 
 **Our app**: AI Checker - Assessment of product condition using image analysis -
 
 
+
 ## Presentation slides and details 
 [Google Slides in English and Japanese](https://docs.google.com/presentation/d/12a401t-DC8ZXhVuus-8bgVfyw_2gj0nC/edit?usp=sharing&ouid=117876754317720359991&rtpof=true&sd=true)
+  
+  
   
 	
 ## DEMO VIDEO
@@ -33,6 +36,8 @@
 
 https://user-images.githubusercontent.com/30760730/171305684-cac0b528-c5b3-42cb-907b-39c956ca7fae.mp4
 
+	
+	
 	
 ## How to run
 
@@ -63,6 +68,8 @@ after cloning repo, you may want to install dependencies in requriement.txt
 	```
 	
 3. Open http://localhost:3000/
+
+
 
 ## Branch運用
 
